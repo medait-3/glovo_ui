@@ -84,15 +84,56 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Container(
-                        alignment: Alignment.center,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(18.0),
-                          child: Image.network(
-                            'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                            fit: BoxFit.cover,
+                      Stack(
+                        children: [
+                          Container(
+                            alignment: Alignment.center,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(18.0),
+                              child: Image.network(
+                                'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                                fit: BoxFit.cover,
+                              ),
+                            ),
                           ),
-                        ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 75.0, left: 9),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Container(
+                                color: Colors.black.withOpacity(0.6),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(3.0),
+                                  child: Text(
+                                    "Burgers",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        // fontWeight: FontWeight.bold,
+                                        fontSize: 14),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: 115,
+                            ),
+                            child: Container(
+                              color: Colors.amber,
+                              child: Padding(
+                                padding: const EdgeInsets.all(3.0),
+                                child: Text(
+                                  "-37%",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 13),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       Padding(
                         padding: const EdgeInsets.only(
@@ -119,16 +160,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                   children: [
                                     Icon(
                                       Icons.thumb_up_off_alt,
-                                      size: 16,
+                                      size: 18,
                                       color: Colors.black,
                                     ),
                                     SizedBox(
                                       width: 3,
                                     ),
                                     Text(
-                                      "data",
+                                      "83% (500)",
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 16),
+                                          color: Colors.black, fontSize: 13),
                                     ),
                                   ],
                                 )),
