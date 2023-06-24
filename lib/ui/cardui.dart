@@ -9,11 +9,13 @@ class CardUi extends StatelessWidget {
     required this.t2,
     required this.t3,
     required this.t4,
+    required this.t5,
   });
   final String t1;
   final String t2;
   final String t3;
   final String t4;
+  final String t5;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -39,7 +41,7 @@ class CardUi extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(5.0),
+                      borderRadius: BorderRadius.circular(4.0),
                       child: Container(
                         color: Colors.black.withOpacity(0.6),
                         child: Padding(
@@ -66,7 +68,7 @@ class CardUi extends StatelessWidget {
                 top: -4,
                 child: Padding(
                   padding: const EdgeInsets.only(
-                    left: 105,
+                    left: 104,
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(5.0),
@@ -119,9 +121,19 @@ class CardUi extends StatelessWidget {
                         SizedBox(
                           width: 3,
                         ),
-                        Text(
-                          t4,
-                          style: TextStyle(color: Colors.black, fontSize: 13),
+                        Row(
+                          children: [
+                            Text(
+                              t4,
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 13),
+                            ),
+                            Text(
+                              t5,
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 13),
+                            ),
+                          ],
                         ),
                       ],
                     )),

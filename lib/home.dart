@@ -85,7 +85,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     t1: "Burgers",
                     t2: "-37%",
                     t3: "McDonalds",
-                    t4: "83% (500)");
+                    t4: "83%",
+                    t5: "(500)");
               },
               childCount: 21,
             ),
