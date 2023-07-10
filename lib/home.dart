@@ -21,28 +21,92 @@ class _MyHomePageState extends State<MyHomePage> {
         slivers: <Widget>[
           SilverAppBar(),
           SliverToBoxAdapter(
-            child: SizedBox(
-              height: 130.0,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: 311,
-                      height: 333,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(18.0),
-                        child: Image.network(
-                          'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-                          fit: BoxFit.cover,
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 170.0,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 10,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SizedBox(
+                          width: 300,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(18.0),
+                            child: Image.network(
+                              'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 16.0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.thumb_up_off_alt,
+                            size: 18,
+                            color: Colors.black,
+                          ),
+                          SizedBox(
+                            width: 3,
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "ee",
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 13),
+                              ),
+                              Text(
+                                "tt",
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 13),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(5.0),
+                        child: Container(
+                          color: Colors.amber,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 0, horizontal: 7),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.moped_outlined,
+                                  size: 20,
+                                ),
+                                Text(
+                                  "PROMO",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                },
-              ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
           SliverToBoxAdapter(
