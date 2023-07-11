@@ -7,10 +7,12 @@ class TextAdapter extends StatelessWidget {
       {super.key,
       required this.textbox,
       required this.color,
-      required this.icon});
+      required this.icon,
+      this.iconclick});
   final String textbox;
   final Color color;
   final IconData icon;
+  final iconclick;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -51,7 +53,7 @@ class TextAdapter extends StatelessWidget {
           ),
           Icon(
             //<-- SEE HERE
-            Icons.arrow_circle_right_rounded,
+            iconclick,
             color: Colors.black,
             size: 27,
           ),

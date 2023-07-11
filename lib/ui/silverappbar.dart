@@ -8,14 +8,14 @@ import 'package:badges/badges.dart' as badges;
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import '../flare/controllerflre.dart';
 
-class SilverAppBar extends StatefulWidget {
-  const SilverAppBar({super.key});
+class SilverAppBarr extends StatefulWidget {
+  const SilverAppBarr({super.key});
 
   @override
-  State<SilverAppBar> createState() => _SilverAppBarState();
+  State<SilverAppBarr> createState() => _SilverAppBarrState();
 }
 
-class _SilverAppBarState extends State<SilverAppBar> {
+class _SilverAppBarrState extends State<SilverAppBarr> {
   MyController? myController;
 
   @override
@@ -171,14 +171,14 @@ class _SilverAppBarState extends State<SilverAppBar> {
                               Text('I am a child!'),
                             ],
                           ),
-                          size: 145,
+                          size: 152,
                           id: ['5-6-43178'],
                           styles: BlobStyles(
                             color: Color.fromARGB(255, 246, 246, 242),
                           ),
                         ),
                         origin: Offset(0, 0),
-                        children: List.generate(5, (index) {
+                        children: List.generate(6, (index) {
                           return Stack(
                             children: [
                               Blob.fromID(
@@ -203,8 +203,8 @@ class _SilverAppBarState extends State<SilverAppBar> {
                           );
                         }),
                         onDragUpdate: (update) {
-                          Offset point =
-                              Offset(update.point.dx * 2, update.point.dy * 2);
+                          Offset point = Offset(
+                              update.point.dx * 331, update.point.dy * 331);
                           myController!.lookAt(point);
                         },
                       ),
