@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class BigCard extends StatelessWidget {
   const BigCard({super.key});
@@ -14,7 +12,7 @@ class BigCard extends StatelessWidget {
         itemCount: 10,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.all(4),
             child: Column(
               children: [
                 Stack(
@@ -28,7 +26,7 @@ class BigCard extends StatelessWidget {
                             borderRadius: BorderRadius.circular(18.0),
                             child: SizedBox(
                               width: 300,
-                              height: 120,
+                              height: 130,
                               child: Image.network(
                                 'https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                                 fit: BoxFit.cover,

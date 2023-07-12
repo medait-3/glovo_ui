@@ -25,12 +25,12 @@ class TextAdapter extends StatelessWidget {
               Stack(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 4.0),
+                    padding: const EdgeInsets.only(left: 4.0, top: 3),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(50.0),
                       child: Container(
                         color: color,
-                        height: 25,
+                        height: 18,
                         width: 18,
                       ),
                     ),

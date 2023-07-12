@@ -122,7 +122,7 @@ class _SilverAppBarrState extends State<SilverAppBarr> {
       pinned: true,
       elevation: 1,
       flexibleSpace: ClipPath(
-        clipper: WaveClipperTwo(flip: true),
+        clipper: OvalBottomBorderClipper(),
         child: Container(
           child: FlexibleSpaceBar(
             background: Container(
